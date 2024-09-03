@@ -1,0 +1,420 @@
+:root {
+    --button-bg: #6A86EA;
+    --button-hover: #4F6FE6FF;
+    --button-active: #3158E2FF;
+    --bg: #fff;
+    --para: #6e6e6e;
+    --head: #fff;
+    --sub-head: #000;
+    --sec-button-bg: transparent;
+    --sec-button-border: ##6A86EA;
+
+    --foot-bg: #1e2128;
+    --foot-text: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Nunito, sans-serif;
+}
+
+/* Initially hide the hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Show menu when the show class is added */
+.hamburger.show {
+    display: flex;
+}
+
+/* Style for hamburger menu links */
+.hamburger a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.hamburger a:hover {
+    background-color: #f4f4f4;
+}
+
+
+/* utility styles */
+.button{
+    cursor: pointer;
+}
+/* Button 15 */
+nav .button {
+    height: 30px;
+}
+
+.card .button{
+    background-color: transparent;
+    color: var(--sub-head);
+    border: 2px solid var(--button-bg);
+    width: fit-content;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.card .button:hover{
+    color: white;
+}
+
+/* Normal Buttons */
+.button {
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: var(--foot-text);
+    /* white */
+    background: #6A86EAFF;
+    /* primary-500 */
+    opacity: 1;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Hover */
+.button:hover {
+    background: var(--button-hover);
+    /* primary-550 */
+}
+
+/* Pressed */
+.button:hover:active {
+    background: var(--button-active);
+    /* primary-600 */
+}
+
+/* Disabled */
+.button:disabled {
+    opacity: 0.4;
+}
+
+.logo {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 32%;
+    height: 90%;
+}
+
+
+/* normal styles */
+
+.hamburger {
+    display: none;
+}
+
+nav .ham {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    position: sticky;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .p1 {
+    display: flex;
+    align-items: center;
+}
+
+nav .p2 {
+    margin: 10px;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--para);
+    transition: .8s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: url('material/hero-bg.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.other {
+    position: relative;
+    z-index: 2; /* Ensures this div is above the dark overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.other h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.other p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+main{
+    display: grid;
+    margin: 80px 0;
+    gap: 100px;
+}
+
+.events{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.classes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.events .cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.events .cards .card{
+    padding: 8px;
+    margin: 10px;
+    display: flex;
+    gap: 5px 0;
+    width: 30vw;
+    height: 30vh;
+    border-radius: 12px; /* border-m */
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+}
+
+.events .cards .card .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.events img{
+    border-radius: 12px;
+    width: 10em;
+    height: 15em;
+    object-fit: cover;
+}
+.classes .cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.classes .cards .card{
+    padding: 8px;
+    margin: 10px;
+    display: flex;
+    gap: 5px 0;
+    width: 30vw;
+    height: 30vh;
+    border-radius: 12px; /* border-m */
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+}
+
+.classes .cards .card .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.classes img{
+    border-radius: 12px;
+    width: 10em;
+    height: 15em;
+    object-fit: cover;
+}
+
+.news_article{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+    background: rgb(226, 226, 226);
+    text-align: center;
+}
+
+.news_article h1{
+    font-size: xx-large;
+    color: var(--button-hover);
+}
+
+footer{
+    background-color: var(--foot-bg);
+    color: var(--foot-text);
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+footer .top {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+footer .bottom {
+    height: 50%;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    gap: 50px;
+    /* gap: 10px; */
+}
+footer .bottom .top{
+    height: 0%;
+}
+
+footer .bottom .bottom{
+    border-top: 2px solid #fff;
+    height: 70px;
+
+}
+footer .bottom .top nav .p2 a{
+    color: #fff;
+}
+
+footer .top .subscribe-container{
+    display: flex;
+    align-items: center;
+}
+.search{
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--para);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding:0 10px;
+    gap: 5px;
+}
+
+.search input{
+    height: 30px;
+    background-color: var(--foot-bg);
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+
+footer .top .subscribe-container .search img{
+    width: 15px;
+    height: 15px;
+}
+
+footer .top .subscribe-container .button{
+    border-radius: 0 50px 50px 0px;
+    height: 33px;
+}
+
+
+
+@media (max-width: 768px) {
+    nav{
+        width: 100vw;
+    }
+    main .cards{
+        flex-direction: column;
+    }
+    .events .cards .card{
+        overflow: hidden;
+        width: 95vw;
+        height: 28vh;
+    }
+    .classes .cards .card{
+        overflow: hidden;
+        width: 95vw;
+        height: 28vh;
+    }
+    nav .p1 a,
+    .p2>button {
+        display: none;
+    }
+
+    nav .ham {
+        display: block;
+    }
+}
+
+@media (max-width: 375px){
+
+    .events .cards .card{
+        overflow: hidden;
+        width: 95vw;
+        height: 38vh;
+    }
+    .classes .cards .card{
+        overflow: hidden;
+        width: 95vw;
+        height: 38vh;
+    }
+}
